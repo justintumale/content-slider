@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Learn jQuery</title>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<style>
+				.red{color:red;}
+				.green{color:green;}
+			</style>
+			<script>
+				$(document).ready(function(){
+					//set up click handler
+
+					
+					$('.myLink').on('mouseenter', function(){
+						$('h1').addClass('red');
+
+						
+						$('h1').addClass('red'); //accesses all h1's on the page
+												//you can run methods on this selector
+						
+						//$('.myLink').on('onclick', function(){ . . .
+						//$('.myLink').on('mouseenter', function(){ . . .
+						//$('.myLink').on('mouseleave', function(){ . . .
+
+						//alert('You Clicked!');
+
+						//$('h1').fadeOut(500);
+						//$('h1').fadeToggle(500);
+						//$('h1').slideToggle(500);
+						//$('h1').slideUp(500);
+						
+					});
+					$('.myLink').on('mouseleave', function(){
+						$('h1').removeClass('red');
+					});
+
+
+					$('.myLink').click(function(){
+						$('h1').text('Hello World');
+						$('h1').css('font-size', '80px');
+					})
+
+					
+
+				});
+			</script>
+	</head>
+	<body>
+		<h1>Welcome Everyone</h1>
+		<a href="#" class="myLink">Click Me</a>
+	</body>
+</html>
